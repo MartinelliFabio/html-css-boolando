@@ -183,6 +183,7 @@ main h3 {
     background-color: var(--green);
 }
 
+/* ! CSS per l'azione dell'hover */
 .second {
     display: none;
 }
@@ -193,6 +194,10 @@ main h3 {
 
 .col:hover .second {
     display: inline-block;
+}
+
+.heart:hover {
+    color: var(--red);
 }
 
 /* ! CSS del Footer  */
