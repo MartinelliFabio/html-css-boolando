@@ -20,6 +20,7 @@
     --green: #008000;
     --footer: #1a1a1a;
     --white: #ffffff;
+    --lightgray: #293133;
 }
 
 body {
@@ -29,7 +30,6 @@ body {
 header {
     background-color: var(--navbar);
     width: 100%;
-    
 }
 
 .fixed {
@@ -50,12 +50,20 @@ header {
 
 .container {
     width: 70%;
-    margin: 70px auto;
+    margin: 0 auto;
+}
+
+main .container {
+    width: 70%;
+    margin: 130px auto;
+}
+
+div.fixed {
+    box-shadow: 2px 2px 5px rgba(30, 30, 30, 0.5);
 }
 
 nav {
-    padding: 20px 250px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.4);
+    padding: 20px 0;
 }
 
 nav li,a {
@@ -66,11 +74,106 @@ nav li,a {
     padding: 0 3px;
 }
 
+h3 {
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+p {
+    font-size: 15px;
+    display: inline-block;
+}
+
 .logo {
     width: 150px;
 }
 
 .icons i {
     color: var(--white);
-    padding: 0 3px;
+}
+
+.col {
+    width: calc((100% - 40px) / 3);
+    cursor: pointer;
+    position: relative;
+}
+
+.margin {
+    margin: 0 20px;
+}
+
+.col img {
+    width: 100%;
+}
+
+.label-heart {
+    display: block;
+    position: absolute;
+    padding: 5px 15px;
+    background-color: var(--white);
+}
+
+.heart {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 35px;
+}
+
+.label-discount {
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    padding: 3px 10px;
+    background-color: var(--red);
+}
+
+.label-sost {
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    padding: 3px 10px;
+    margin-left: 10px;
+    background-color: var(--green);
+}
+
+.label-discount, .label-sost, .label-sost-single {
+    color: var(--white);
+    font-weight:bold;
+    font-size: 14px;
+}
+
+.description {
+   position: absolute;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--red);
+}
+
+.price-discount {
+    text-decoration: line-through;
+}
+
+.label-sost-single {
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    padding: 3px 10px;
+    background-color: var(--green);
+}
+
+.second {
+    display: none;
+}
+
+.col:hover .first {
+    display: none;
+}
+
+.col:hover .second {
+    display: inline-block;
 }
